@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D409D7320EBB55700D5A29A /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D409D7220EBB55700D5A29A /* HistoryViewController.m */; };
 		2DCB5E2A20E8C05100D54526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCB5E2920E8C05100D54526 /* AppDelegate.m */; };
 		2DCB5E2D20E8C05100D54526 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCB5E2C20E8C05100D54526 /* ViewController.m */; };
 		2DCB5E3020E8C05100D54526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCB5E2E20E8C05100D54526 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D409D7120EBB55700D5A29A /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		1D409D7220EBB55700D5A29A /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		2DCB5E2520E8C05100D54526 /* WebBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCB5E2820E8C05100D54526 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DCB5E2920E8C05100D54526 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				2DCB5E3320E8C05100D54526 /* LaunchScreen.storyboard */,
 				2DCB5E3620E8C05100D54526 /* Info.plist */,
 				2DCB5E3720E8C05100D54526 /* main.m */,
+				1D409D7120EBB55700D5A29A /* HistoryViewController.h */,
+				1D409D7220EBB55700D5A29A /* HistoryViewController.m */,
 			);
 			path = WebBrowser;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				2DCB5E2D20E8C05100D54526 /* ViewController.m in Sources */,
 				2DCB5E3820E8C05100D54526 /* main.m in Sources */,
 				2DCB5E2A20E8C05100D54526 /* AppDelegate.m in Sources */,
+				1D409D7320EBB55700D5A29A /* HistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

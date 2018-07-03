@@ -9,12 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-{
-    IBOutlet UIWebView *web;
-    IBOutlet UITextField *address;
-}
 
-- (IBAction)search:(id)sender;
 
 @end
 
