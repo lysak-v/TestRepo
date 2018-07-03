@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+extern NSString *fileName;
 
 @end
 

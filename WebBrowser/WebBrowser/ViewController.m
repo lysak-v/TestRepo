@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()<UIWebViewDelegate>
+@interface ViewController () <UIWebViewDelegate>
 {
     IBOutlet UIWebView *web;
     IBOutlet UITextField *address;
@@ -29,7 +29,9 @@
 
 @implementation ViewController
 
-@synthesize historyURL;
+NSString *fileName = @"/Users/volodymyr/Downloads/TestRepo-WebBrowserBranch/history.txt";
+
+@synthesize backButton, forwardButton, textURL, historyURL;
 
 - (IBAction)search:(id)sender
 {
@@ -58,18 +60,11 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    if(![web canGoBack])
-        _backButton.enabled = NO;
-    else
-        _backButton.enabled = YES;
-
-    if(![web canGoForward])
-        _forwardButton.enabled = NO;
-    else
-        _forwardButton.enabled = YES;
+    [backButton setEnabled:[web canGoBack]];
+    [forwardButton setEnabled:[web canGoForward]];
     
     NSString *historyURL = [[[[web request] URL] absoluteString] stringByAppendingString:@"\n"];
-    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:@"/Users/vlysa/Downloads/TestRepo-WebBrowserBranch/history.txt"];
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:fileName];
     
     if(fileHandle)
     {
@@ -79,11 +74,10 @@
     }
     else
     {
-        [historyURL writeToFile:@"/Users/vlysa/Downloads/TestRepo-WebBrowserBranch/history.txt" atomically:YES encoding:NSUTF8StringEncoding error:nil];
+        [historyURL writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
     
-    
-    [_textURL setText:[[[web request] URL] absoluteString]];
+    [textURL setText:[[[web request] URL] absoluteString]];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
